@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>بطاقة الموظف</title>
+  <title>بطاقات الموظفين مع رمز QR</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button id="toggle-language">English</button>
-  <button id="toggle-dark">🌓</button>
   <div class="container">
-    <h1 id="title">بطاقة الموظف</h1>
+    <button id="toggle-lang">English</button>
+    <h1 id="form-title">مولد بطاقات الموظفين</h1>
     <form id="employee-form">
       <input type="text" id="name" placeholder="الاسم الكامل" required />
       <input type="text" id="id" placeholder="الرقم الوظيفي" required />
@@ -33,12 +32,12 @@
       <input type="email" id="email" placeholder="البريد الإلكتروني" required />
       <input type="tel" id="phone" placeholder="رقم الهاتف الأرضي" />
       <input type="tel" id="mobile" placeholder="رقم الجوال" required />
-      <button type="submit" id="generate">إنشاء البطاقة</button>
+      <button type="submit" id="create-card">إنشاء البطاقة</button>
     </form>
     <div id="cards-container"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
+  <script src="bilingual_support.js"></script>
 </body>
 </html>
