@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>مولد رمز QR للموظفين</title>
+  <title>بطاقة موظف مع رمز QR</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>مولد رمز QR للموظفين</h1>
+    <h1>بطاقة موظف مع رمز QR</h1>
     <form id="employee-form">
       <input type="text" id="name" placeholder="الاسم الكامل" required />
-      <input type="text" id="id" placeholder="الرقم الوظيفي" required />
-      <input type="text" id="department" placeholder="القسم" required />
       <input type="text" id="position" placeholder="المنصب" required />
       <input type="email" id="email" placeholder="البريد الإلكتروني" required />
-      <input type="tel" id="phone" placeholder="رقم الهاتف الأرضي" />
+      <input type="tel" id="phone" placeholder="رقم الهاتف" />
       <input type="tel" id="mobile" placeholder="رقم الجوال" required />
-      <button type="submit">إنشاء رمز QR</button>
+      <input type="text" id="website" placeholder="الموقع الإلكتروني" />
+      <button type="submit">إنشاء البطاقة</button>
     </form>
     <div id="card" class="card">
-      <div id="card-details"></div>
-      <div id="qrcode"></div>
+      <div class="card-content">
+        <div class="logo">
+          <img src="logo.jpg" alt="شعار الشركة" />
+        </div>
+        <div class="details" id="card-details"></div>
+        <div class="qrcode" id="qrcode"></div>
+      </div>
+      <p class="note">يرجى عدم طباعة هذه البطاقة إلا عند الضرورة للمحافظة على البيئة</p>
       <button onclick="window.print()" class="print-button">طباعة البطاقة</button>
     </div>
   </div>
