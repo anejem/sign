@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مولد رمز QR للموظفين</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>مولد رمز QR للموظفين</h1>
+    <form id="employee-form">
+      <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="text" id="id" placeholder="الرقم الوظيفي" required />
+      <input type="text" id="department" placeholder="القسم" required />
+      <input type="text" id="position" placeholder="المنصب" required />
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+      <input type="tel" id="phone" placeholder="رقم الهاتف الأرضي" />
+      <input type="tel" id="mobile" placeholder="رقم الجوال" required />
+      <button type="submit">إنشاء رمز QR</button>
+    </form>
+    <div id="qrcode"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
