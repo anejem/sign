@@ -19,7 +19,11 @@
       <input type="tel" id="mobile" placeholder="رقم الجوال" required />
       <button type="submit">إنشاء رمز QR</button>
     </form>
-    <div id="qrcode"></div>
+    <div id="card" class="card">
+      <div id="card-details"></div>
+      <div id="qrcode"></div>
+      <button onclick="window.print()" class="print-button">طباعة البطاقة</button>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
   <script src="script.js"></script>

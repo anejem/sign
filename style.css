@@ -30,3 +30,30 @@ button {
 #qrcode {
   margin-top: 20px;
 }
+
+.card {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px dashed #0078d7;
+  background-color: #fff;
+}
+
+.print-button {
+  margin-top: 20px;
+  background-color: #28a745;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .card, .card * {
+    visibility: visible;
+  }
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

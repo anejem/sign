@@ -25,4 +25,14 @@ document.getElementById("employee-form").addEventListener("submit", function (e)
     width: 200,
     height: 200
   });
+
+  document.getElementById("card-details").innerHTML = `
+    <p><strong>الاسم:</strong> ${name}</p>
+    <p><strong>الرقم الوظيفي:</strong> ${id}</p>
+    <p><strong>القسم:</strong> ${department}</p>
+    <p><strong>المنصب:</strong> ${position}</p>
+    <p><strong>البريد الإلكتروني:</strong> ${email}</p>
+    <p><strong>الهاتف:</strong> ${phone}</p>
+    <p><strong>الجوال:</strong> ${mobile}</p>
+  `;
 });
