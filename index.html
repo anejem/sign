@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>بطاقة موظف مع رمز QR</title>
+  <title>بطاقات الموظفين مع رمز QR</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>بطاقة موظف مع رمز QR</h1>
+    <h1>مولد بطاقات الموظفين</h1>
     <form id="employee-form">
       <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="text" id="id" placeholder="الرقم الوظيفي" required />
+      <select id="department" required>
+        <option value="" disabled selected>اختر القسم</option>
+        <option value="تكنولوجيا المعلومات">تكنولوجيا المعلومات</option>
+        <option value="قسم المالية">قسم المالية</option>
+        <option value="الموارد البشرية">الموارد البشرية</option>
+        <option value="المبيعات">المبيعات</option>
+        <option value="التسويق">التسويق</option>
+        <option value="الدعم الفني">الدعم الفني</option>
+        <option value="الإدارة">الإدارة</option>
+        <option value="العمليات">العمليات</option>
+        <option value="المشتريات">المشتريات</option>
+        <option value="الجودة">الجودة</option>
+        <option value="other">قسم غير موجود</option>
+      </select>
+      <input type="text" id="custom-department" placeholder="أدخل اسم القسم الجديد" style="display:none;" />
       <input type="text" id="position" placeholder="المنصب" required />
       <input type="email" id="email" placeholder="البريد الإلكتروني" required />
-      <input type="tel" id="phone" placeholder="رقم الهاتف" />
+      <input type="tel" id="phone" placeholder="رقم الهاتف الأرضي" />
       <input type="tel" id="mobile" placeholder="رقم الجوال" required />
-      <input type="text" id="website" placeholder="الموقع الإلكتروني" />
       <button type="submit">إنشاء البطاقة</button>
     </form>
-    <div id="card" class="card">
-      <div class="card-content">
-        <div class="logo">
-          <img src="logo.jpg" alt="شعار الشركة" />
-        </div>
-        <div class="details" id="card-details"></div>
-        <div class="qrcode" id="qrcode"></div>
-      </div>
-      <p class="note">يرجى عدم طباعة هذه البطاقة إلا عند الضرورة للمحافظة على البيئة</p>
-      <button onclick="window.print()" class="print-button">طباعة البطاقة</button>
-    </div>
+    <div id="cards-container"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
   <script src="script.js"></script>
